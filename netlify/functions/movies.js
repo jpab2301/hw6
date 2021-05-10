@@ -22,7 +22,7 @@ exports.handler = async function(event) {
   let year = event.queryStringParameters.year
   let genre = event.queryStringParameters.genre
   
-  if (year == undefined || genre == undefined) {
+  if (year == undefined || genre == undefined || year==``|| genre==``) {
     return {
       statusCode: 200, // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
       body: `Please enter a year and a genre as querystring parameters` // a string of data
